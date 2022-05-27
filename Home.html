@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+     <link rel="icon" type="image/x-icon" href="PBLlogo.png">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        body{
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: var(--primary-color);
+        }
+        .div1{
+            background-color: var(--secondary-color);
+            height: auto; 
+            width: auto;
+            margin-top: 10px;
+            padding-bottom: 1.5%;
+            border: 5px double var(--quaternary-color);
+        }
+        .Nourish{
+            max-height: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .txt{
+            margin-left: 60px;
+            text-decoration: none;
+            color: var(--quaternary-color);
+            font-family: monospace;
+            font-size: 20px;
+            padding: 3px;
+            border-top: 2px groove var(--quaternary-color);
+            border-bottom: 2px groove var(--quaternary-color);
+            transition-property: color, border-bottom, border-top;
+            transition-duration: 0.5s;
+        }
+        .txt:hover{
+            border-top: 2px groove var(--secondary-color);
+            border-bottom: 2px groove var(--secondary-color);
+            color: white;
+        }
+        #icon{
+            margin-top: 22px;
+            margin-right: 22px;
+            float: right;
+            max-width: 50px;
+            cursor: pointer;
+            transition-property: max-width;
+            transition-duration: 0.3s;
+        }
+        #icon:hover{
+            max-width: 52px;
+        }
+        :root{
+            --primary-color: #e6f7f7;
+            --secondary-color: #4bc5c9;
+            --tertiary-color: #28989c;
+            --quaternary-color: #f4f5f2;
+        }
+        .dark-theme{
+            --primary-color: #0b4142;
+            --secondary-color: #137275;
+            --tertiary-color: #f4f5f2;
+            --quaternary-color: #d0d8d9;
+        }
+        .div2{
+            color: var(--tertiary-color);
+            font-family: 'Montserrat', monospace;
+            text-align: right;
+            width: 25%;
+            margin-left: 135px;
+            float: left;
+        }
+        .div2 span{
+            text-align: left;
+        }
+        .div3{
+            margin-top: -5px;
+            margin-left: 4.5%;
+            float: left;
+        }
+        .div3 img{
+            max-height: 350px;
+        }
+        .div4 span {
+            text-align: right;
+        }
+        .div4{
+            color: var(--tertiary-color);
+            font-family: 'Montserrat', monospace;
+            text-align: left;
+            width: 25%;
+            margin-right: 150px;
+            float: right;
+        }
+        .divbig{
+            margin-top: 100px;
+        }
+        .div5 p{
+            color: var(--tertiary-color);
+            font-family: 'Montserrat', monospace;
+            position: fixed;
+            bottom: 0px;
+        }
+         :root{
+            --primary-color: #e6f7f7;
+            --secondary-color: #4bc5c9;
+            --tertiary-color: #28989c;
+            --quaternary-color: #f4f5f2;
+        }
+        .dark-theme{
+            --primary-color: #0b4142;
+            --secondary-color: #137275;
+            --tertiary-color: #f4f5f2;
+            --quaternary-color: #d0d8d9;
+        }
+        .footer{
+            line-height: 1;
+            font-family: 'Montserrat', monospace;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 95px;
+            max-width: 1165px;
+            margin:auto;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul{
+            list-style: none;
+        }
+        .footer{
+            background-color: var(--secondary-color);
+            padding: 40px 0;
+            position: fixed;
+            bottom: 0;
+        }
+        .footer-col{
+            width: 25%;
+            padding: 0 10px;
+        }
+        .footer-col h4{
+            font-size: 16px;
+            color: var(--quaternary-color);
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-col h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color: var(--tertiary-color);
+            height: 1.7px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a{
+            font-size: 14px;
+            text-transform: capitalize;
+            color: var(--quaternary-color);
+            text-decoration: none;
+            font-weight: 300;
+            color: var(--quaternary-color);
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover{
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-spec li{
+            color: var(--quaternary-color);
+        }
+        .footer-spec h4{
+            font-size: 16px;
+            color: var(--quaternary-color);
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-spec h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color: var(--tertiary-color);
+            height: 2px;
+            box-sizing: border-box;
+            width: 45px;
+        }
+        @media only screen and (max-width: 1080px){
+        /*for tablet:*/
+        .Nourish{
+            max-width: 100px;
+        }
+        .txt{
+            font-size: 13px;
+            padding: 1px;
+            margin-left: 20px;
+        }
+        #icon {
+            max-height: 28px;
+            float: right;
+            margin-right: 1px;
+         }
+         .div2{
+            font-size: 15px;
+            width: auto;
+            padding: 0%;
+            margin:0% ;
+        }
+        .div4{
+            font-size: 15px;
+            width: auto;
+            padding: 0%;
+            margin:0% ;
+        }
+        .div3 img{
+            margin: 40px;
+        }
+        .footer{
+            opacity: 15%;
+            transition: opacity 0.3s ease;
+        }
+        .footer:hover{
+            opacity: 100%;
+        }
+        .div5{
+            opacity: 15%;
+        }
+
+   
+    </style>
+</head>
+<body>
+    
+    <div class="div1">
+    <a href="Home.html"><img src="Nourish.png" class="Nourish" alt="img_not_found"></a>
+    <a href="Summer.html" class="txt">Summer</a>
+    <a href="Winter.html" class="txt">Winter</a>
+    <a href="Challenge.html" class="txt">Challenge</a>
+    <a href="Recommended.html" class="txt">Recommended</a>
+    <img src="PowerOfTwo.png" id="icon" alt="img_not_found">
+    </div>
+
+<div class="divbig">
+
+    <div class="div2">
+        <h2>AgeRestriction</h2>
+        <p>Our diet plans are mainly for weight-loss and are much recommended for the age of 20 and above since they can stunt growth in children and teenagers. The diets are especially made for middle-aged people.</p>
+        <span>
+        <h2>Categories</h2>
+        <p>Summer and Winter categories are divided seasonally for appetite, weather and seasonal food. Challenge category is for when you want to know weather if you're capable of eating healthy. Recommended category is for the time when you are having trouble choosing a meal plan since there are just so many to choose from.</p></span>
+    </div>
+
+    <div class="div3">
+        <img src="Salad.png" alt="img_not_found">
+    </div>
+
+    <div class="div4">
+        <h2>What is diet?</h2>
+        <p>In nutrition, diet is the sum of food consumed by a person or other organism. The word diet often implies the use of specific intake of nutrition for health or weight-management reasons (with the two often being related).</p>
+        <span>
+        <h2>Importance of Diet</h2>
+        <p>A healthy diet is essential for good health and nutrition. It protects you against many chronic noncommunicable diseases, such as heart disease, diabetes and cancer. Eating a variety of foods and consuming less salt, sugars and saturated and industrially-produced trans-fats, are essential for healthy diet.</p>
+        </span>
+    </div>
+    
+</div>
+
+<div class="div5">
+    <p>© 2022 pngwing.com | Alright reserved |</p>
+</div>
+
+<script id="call">
+    var icon = document.getElementById("icon");
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");}
+</script>
+
+<footer class="footer">
+     <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+            <li><a href="PrivacyPolicy.html">privacy policy</a></li>
+            <li><a href="About.html">about us</a></li>
+                </ul>
+            </div>
+        <div class="footer-col">
+          <h4>support us</h4>
+          <ul>
+            <li><a href="https://www.twitter.com">Twitter</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100081600758569">Facebook</a></li>
+            <li><a href="https://www.instagram.com/company_nourish/?hl=en">Instagram</a></li>
+            <li><a href="https://www.kbzpay.com">kbz pay</a></li>
+          </ul>
+        </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="Help.html">how to use</a></li>
+                </ul>
+            </div>
+        <div class="footer-spec">
+          <h4>Contact us</h4>
+          <ul>
+            <li>companynourish@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
